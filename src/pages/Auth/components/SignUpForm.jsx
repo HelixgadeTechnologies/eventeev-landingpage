@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Button, Input } from '../../../components/elements'
+import React, { useState } from 'react';
+import { Button } from '../../../components/elements';
+import { Input } from '../../../components/section';
 import { FaCheck } from "react-icons/fa";
 
 const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isLoading}) => {

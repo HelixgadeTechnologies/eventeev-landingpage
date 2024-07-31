@@ -16,7 +16,7 @@ export default {
 
 
 
-        primary: "#0061FF",
+        primary: "#EB5017",
         secondary: "#41C498",
         gray_4: "rgba(189, 189, 189, 1)",
         textprimary: "#162D3A",

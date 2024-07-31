@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, Input } from "../../../components/elements";
+import { Button } from "../../../components/elements";
+import {Input } from "../../../components/section";
 import { error } from "../../../assets/icons";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
