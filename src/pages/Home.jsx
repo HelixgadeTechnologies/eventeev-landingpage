@@ -25,8 +25,8 @@ const Home = () => {
     <main className=" overflow-x-hidden">
       <Nav />
       <section className="px-5 md:px-10 lg:px-28 pt-[96px]">
-        <div className="font-bold grid items-center">
-          <h2 className=" text-[40px] md:text-[60px] text-center">
+        <div className="font-bold grid xl:w-[688px] mx-auto items-center">
+          <h2 className=" text-[40px] md:text-[60px]  text-center">
             Effortless Events. Engaged Audiences.
           </h2>
           <p className="text-xl text-center mt-14 md:mt-4 pb-4">
@@ -69,7 +69,7 @@ const Home = () => {
             <div key={index} className="flex gap-4 items-center">
               <img src={item.icon} className="w-16 h-16 lg:w-10 lg:h-10 " />
               <div className=" ">
-                <p className="text-2xl font-bold text-gray-900 text-nowrap">
+                <p className="text-2xl font-feather font-bold text-gray-900 text-nowrap">
                   {item.count}
                 </p>
                 <p className="text-sm text-gray-600 text-nowrap">
@@ -104,7 +104,7 @@ const Home = () => {
       </section>
 
       {/* Mobile Project Management Section */}
-      <section className="px-5 md:px-10 lg:px-28 py-12 xl:flex justify-between">
+      <section className="px-5 md:px-10 lg:px-28 py-12 lg:pb-0 xl:flex justify-between">
         <section className="xl:w-1/2 place-self-center">
           <div className="mb-8 ">
             <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-2">

@@ -4,12 +4,21 @@
 
 
 
+@font-face {
+  font-family: 'Feather';
+  src: url('./fonts/feather.ttf') format('truetype'),;
+  font-weight: 700;
+  
+}
 
-  .background-image {
-    background-image: url('./assets/images/location.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat:no-repeat;
-    min-height: 100vh;
-    width: 100%;
-  }
+body {
+  font-family: 'Inter', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Feather', sans-serif; 
+}
+
+
+
+

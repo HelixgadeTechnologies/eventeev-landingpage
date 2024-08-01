@@ -7,14 +7,10 @@ export default {
         purple2: "#6145D0",
         based: "#090914",
         gray_6: "#52525B",
-        gray_7: '#F8FAFC',
-        blue1: '#177AE5',
-        danger: '#EB1D35',
-        success: '#00B058',
-
-
-
-
+        gray_7: "#F8FAFC",
+        blue1: "#177AE5",
+        danger: "#EB1D35",
+        success: "#00B058",
 
         primary: "#EB5017",
         secondary: "#41C498",
@@ -33,6 +29,10 @@ export default {
       },
       borderRadius: {
         btnRadius: "10px",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        feather: ["Feather", "sans-serif"],
       },
     },
   },
