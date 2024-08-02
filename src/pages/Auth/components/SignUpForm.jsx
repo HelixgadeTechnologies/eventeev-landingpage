@@ -26,24 +26,33 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
     };
   return (
     <form className="flex flex-col gap-6">
+      <div className=" flex  gap-6">
+        <Input
+          label={`First Name`}
+          labelClass={`text-[14px]`}
+          name="firstname"
+          onChange={handleInputChange}
+          value={formData.firstname}
+          type="text"
+          required
+        />
+        <Input
+          label={`Last Name`}
+          labelClass={`text-[14px]`}
+          name="lastname"
+          onChange={handleInputChange}
+          value={formData.lastname}
+          type="text"
+          required
+        />
+      </div>
       <Input
-        label={`First Name`}
+        label={`Organisation name`}
         labelClass={`text-[14px]`}
-        name="firstname"
+        name="organisationName"
         onChange={handleInputChange}
-        value={formData.firstname}
+        value={formData.organisationName}
         type="text"
-        placeholder="Enter your first name"
-        required
-      />
-      <Input
-        label={`Last Name`}
-        labelClass={`text-[14px]`}
-        name="lastname"
-        onChange={handleInputChange}
-        value={formData.lastname}
-        type="text"
-        placeholder="Enter your last name"
         required
       />
       <Input
@@ -53,7 +62,6 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
         onChange={handleInputChange}
         value={formData.email}
         type="email"
-        placeholder="Enter your email address"
         required
       />
       <Input
@@ -63,10 +71,9 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
         type="password"
         value={formData.password}
         onChange={handleChange}
-        placeholder="Enter your password"
         required
       />
-      <ul>
+      <ul className="hidden">
         <li className="flex gap-2">
           {criteria.isMinLength ? <FaCheck style={{ color: "green" }} /> : null}{" "}
           Minimum of 8 characters long
@@ -87,7 +94,7 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
         </li>
       </ul>
 
-      <Button type={"submit"} className={`bg-purple2`}>
+      <Button type={"submit"} className={`bg-primary py-4 font-semibold`}>
         Create an Account
       </Button>
     </form>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom'
+import routes from "../../router/routes";
 import { menu, close, logo } from "../../assets/icons";
 import Button from "../elements/Button";
 
@@ -11,7 +12,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="md:text-xl">
+    <nav className="md:text-xl px-5 md:px-10 lg:px-28">
       <div className="flex justify-between items-center p-4">
         <div className="flex items-center gap-2">
           <img
@@ -22,7 +23,7 @@ const Nav = () => {
             className="rounded"
           />
         </div>
-        <ul className="hidden text-sm font-semibold lg:flex items-center gap-4">
+        <ul className="hidden text-sm md: font-semibold lg:flex items-center gap-4">
           <li>
             <Link href="/about">About</Link>
           </li>
@@ -38,8 +39,12 @@ const Nav = () => {
           </li>
         </ul>
         <div className="hidden lg:flex items-center text-sm font-semibold gap-6">
-          <p className="text-primary">Login</p>
-          <Button className=" px-4 py-[10px] ">Get Started</Button>
+          <p className="text-primary">
+            <Link to={routes.LOGIN}>Login</Link>
+          </p>
+          <Button className=" px-4 py-[10px] ">
+            <Link to={routes.SIGN_UP}>Get Started</Link>
+          </Button>
         </div>
         <Button
           className="lg:hidden z-20"
@@ -90,8 +95,12 @@ const Nav = () => {
               </li>
             </ul>
             <div className="flex flex-col items-center text-sm t font-semibold gap-6">
-              <p className="text-primary">Login</p>
-              <Button className=" px-4 py-[10px]">Get Started</Button>
+              <p className="text-primary">
+                <Link to={routes.LOGIN}>Login</Link>
+              </p>
+              <Button className=" px-4 py-[10px]">
+                <Link to={routes.SIGN_UP}>Get Started</Link>
+              </Button>
             </div>
           </div>
         </div>

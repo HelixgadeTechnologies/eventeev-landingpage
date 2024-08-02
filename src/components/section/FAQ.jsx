@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {right} from "../../assets/icons"
 
 const faqData = [
   {
@@ -32,7 +33,7 @@ const faqData = [
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(5);
   const [showMore, setShowMore] = useState(true);
 
   const handleShowMore = () => {
@@ -58,13 +59,13 @@ const FAQ = () => {
               <li
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`cursor-pointer p-4 mb-2 rounded-lg ${
+                className={`cursor-pointer flex justify-between items-center p-4 mb-2 rounded-lg ${
                   activeIndex === index
                     ? "bg-[#FAFBFF] text-orange-600 font-bold"
                     : "bg-white text-gray-700"
                 }`}
               >
-                {item.question}
+                {item.question}<img src={right} alt="icon" />
               </li>
             ))}
           </ul>

@@ -4,7 +4,9 @@ import logos from './Logos.png';
 import phone1 from './phone1.png';
 import phone2 from './phone2.png';
 import play from './play.png';
-import store from './store.png'
+import store from './store.png';
+import banner from './signup.png';
+import reset from './reset.png'
 
 
 export {
@@ -14,5 +16,7 @@ export {
     phone1,
     phone2,
     play,
-    store
+    store,
+    banner,
+    reset
 };

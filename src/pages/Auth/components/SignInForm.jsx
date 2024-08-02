@@ -18,12 +18,19 @@ const SignUpForm = ({
      setShowPassword(!showPassword);
    };
 
+    const handleCheckboxChange = (e) => {
+      setFormData({
+        ...formData,
+        rememberMe: e.target.checked,
+      });
+    };
+
 
   return (
     <form className="flex flex-col ">
       <Input
         label={`Email Address`}
-        labelClass={`text-[14px]`}
+        labelClass={`text-sm`}
         name="email"
         onChange={handleInputChange}
         value={formData.email}
@@ -33,9 +40,8 @@ const SignUpForm = ({
       />
       <Input
         label={`Password`}
-
         inputClass={`mt-6`}
-        labelClass={`text-[14px]`}
+        labelClass={`text-sm`}
         name="password"
         type={showPassword ? "text" : "password"}
         value={formData.password}
@@ -47,14 +53,31 @@ const SignUpForm = ({
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </button>
       </Input>
+
+      <div className="my-8 flex flex-col md:flex-row justify-between md:items-center">
+
+      <div>
+        <label className="flex items-center text-sm whitespace-nowrap ">
+          <input
+            type="checkbox"
+            name="rememberMe"
+            checked={formData.rememberMe || false}
+            onChange={handleCheckboxChange}
+            className="mr-2"
+          />
+          Remember me for 30 days
+        </label>
+      </div>
       <Link
         to={routes.FORGOT_PASSWORD}
-        className="w-full text-end text-xs text-danger font-semibold mt-4 mb-8"
+        className="w-full text-xs text-right text-primary font-semibold "
       >
         Forgot Password?
       </Link>
+      </div>
 
-      <Button type={"submit"} className={`bg-purple2`}>
+
+      <Button type={"submit"} className={`bg-primary py-4 font-semibold`}>
         Sign In
       </Button>
     </form>

@@ -2,6 +2,7 @@ import React, {useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import routes from "../../router/routes";
 import { success } from "../../assets/icons";
+import { reset } from "../../assets/images";
 import Layout from "../../layout/AuthLayout";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -42,16 +43,17 @@ const ForgetPwd = () => {
   };
 
   return (
-    <section className="grid justify-center w-full items-center">
-      <div className="md:text-center mt-[70px] md:mt-[106px] w-full px-[30px] pt-8 ">
-        <h1 className="text-basedark font-bold text-4xl md:text-5xl">
-          Reset your password
-        </h1>
-        <p className="text-lg mt-2 mb-8">
-          Don’t worry it happens to the best of us 🤗
-        </p>
+    <section className="flex">
+      <div className=" md:w-1/2 hidden lg:block">
+        <img src={reset} alt="forget password image" />
       </div>
-      <div className="w-full px-[30px] pt-6 md:pt-8 pb-4 md:shadow-formShadow mb-5 rounded-btnRadius">
+      <div className="w-full md:w-1/2 mx-auto mt-[280px] md:mt-[150px] lg:m-0  flex flex-col justify-center px-[30px] lg:px-20 xl:px-[139px] pt-6 md:pt-8 pb-4 md:shadow-formShadow rounded-btnRadius">
+        <div className=" ">
+          <p className="text-basedark font-bold text-4xl">Password Reset</p>
+          <p className="text-sm mt-2 mb-12 ">
+            Don’t worry it happens to the best of us 🔐
+          </p>
+        </div>
         <ForgetPwdForm
           email={email}
           handleInputChange={handleInputChange}
@@ -60,27 +62,28 @@ const ForgetPwd = () => {
           emailInputRef={emailInputRef}
           showError={showError}
         />
-      </div>
-      <div className="text-center mt-5 md:mt-10">
-        <p className="text-textgray text-sm mb-10">
-          <Link to={routes.LOGIN} className="text-based font-semibold text-lg">
-            Back to Sign In
-          </Link>
-        </p>
+        <div className="text-center ">
+          <p className="text-textgray text-sm mb-10">
+            Remember your password?{" "}
+            <Link to={routes.LOGIN} className="text-primary font-semibold">
+              Log in
+            </Link>
+          </p>
 
-        {showSuccess && (
-          <div className="bg-success p-4 text-white rounded-[4px] flex gap-4 items-start">
-            <img src={success} alt="success" />
-            <div className="">
-              <p className="text-start">Success</p>
+          {showSuccess && (
+            <div className="bg-success p-4 text-white rounded-[4px] flex gap-4 items-start">
+              <img src={success} alt="success" />
+              <div className="">
+                <p className="text-start">Success</p>
 
-              <p className="text-start">
-                An email has been sent successfully to your registered email.
-                Click the link to reset your password
-              </p>
+                <p className="text-start">
+                  An email has been sent successfully to your registered email.
+                  Click the link to reset your password
+                </p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </section>
   );

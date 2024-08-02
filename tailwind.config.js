@@ -23,12 +23,16 @@ export default {
         lighttextgray: "#BDBDBD",
         primaryWhite: "#F3F9FA",
       },
+      backgroundImage: {
+        signup: "url('../src/assets/images/signup.png')",
+        reset: "url('../src/assets/images/reset.png')",
+      },
       boxShadow: {
         btnShadow: "0px 1px 0px 0px rgba(27, 31, 35, 0.05)",
         formShadow: " 0px 10px 15px 0px #00000008, 0px 3px 11px 0px #0000000F",
       },
       borderRadius: {
-        btnRadius: "10px",
+        btnRadius: "0.27rem",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

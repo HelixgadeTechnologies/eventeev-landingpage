@@ -15,7 +15,7 @@ const ForgetPwdForm = ({
   showError,
 }) => {
   return (
-    <form className="flex flex-col ">
+    <form className="flex flex-col">
       <Input
         label={`Email Address`}
         labelClass={`text-[14px]`}
@@ -23,7 +23,7 @@ const ForgetPwdForm = ({
         onChange={handleInputChange}
         value={email}
         ref={emailInputRef}
-        coverClass={showError ? 'border-red-500 bg-red-100' : ''}
+        coverClass={showError ? "border-red-500 bg-red-100" : ""}
         type="email"
         placeholder="Enter your email address"
         required
@@ -36,8 +36,8 @@ const ForgetPwdForm = ({
         </p>
       )}
 
-      <Button type={"submit"} className={`bg-purple2 mt-8 mb-10`}>
-        Send recovery link to Email
+      <Button type={"submit"} className={`bg-primary py-4 mt-6 mb-9 font-semibold`}>
+        Send Link
       </Button>
     </form>
   );

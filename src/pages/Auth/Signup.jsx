@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import routes from "../../router/routes";
 import { google } from "../../assets/icons";
+import { banner} from "../../assets/images";
 import Layout from "../../layout/AuthLayout";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -12,6 +13,7 @@ const Signup = () => {
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
+    organisationName: "",
     email: "",
     password: "",
   });
@@ -38,7 +40,7 @@ const Signup = () => {
         lastName: formData.lastname,
         email: formData.email,
         password: formData.password,
-        
+        organisationName: formData.organisationName,
       };
 
       try {
@@ -59,33 +61,44 @@ const Signup = () => {
   };
 
   return (
-    <section className="grid justify-center w-full items-center">
-      <div className="md:text-center md:mt-[106px] w-full px-[30px] pt-8 ">
-        <h1 className="text-basedark font-bold text-4xl md:text-5xl">
-          Get Started
-        </h1>
+    <section className="flex flex-col lg:flex-row ">
+      <div className="bg-signup bg-cover bg-no-repeat bg-center hidden px-10 pt-10 lg:px-20 lg:pt-32 text-white w-full md:block">
+        <p className=" font-semibold  text-5xl lg:text-6xl">
+          Elevate your Event workflow with Eventeev
+        </p>
         <p className="text-lg mt-2 mb-8">
-          Enter your company email account to get started
+          Our comprehensive Event platform offers you an unparalleled range of
+          event component, sparking creativity and boosting efficiency.
         </p>
       </div>
-      <div className="w-full px-[30px] pt-8 pb-4 md:shadow-formShadow mb-5 rounded-btnRadius">
-        <SignUpForm formData={formData} setFormData={setFormData} handleInputChange={handleInputChange} handleSignup={handleSignup} isLoading={isLoading} />
+      <div className="w-full px-8 py-10 xl:px-[130px] xl:py-[120px] lg:px-10 lg:py-10 md:shadow-formShadow  rounded-btnRadius">
+        <h3 className="text-[#1B1818] font-semibold text-4xl mb-10">
+          Sign up!
+        </h3>
+        <SignUpForm
+          formData={formData}
+          setFormData={setFormData}
+          handleInputChange={handleInputChange}
+          handleSignup={handleSignup}
+          isLoading={isLoading}
+        />
         <div className="text-center ">
-          <p className=" flex gap-2 w-full bg-gray_7 mt-8 mb-4 justify-center items-center py-4 rounded-btnRadius">
-            <img src={google} alt="google-icon" />
-            Sign up with Google
-          </p>
-          <p>
-            By signing up, you agree to our{" "}
-            <span className="text-blue1">Terms of Service</span> and{" "}
-            <span className="text-blue1">Privacy Policy</span>
-          </p>
-          <p className="text-textgray text-sm mt-4 mb-10">
+          <p className="text-textgray text-sm my-7">
             Already have an account?{" "}
-            <Link to={routes.LOGIN} className="text-based font-semibold">
-              sign in with email
+            <Link to={routes.LOGIN} className="text-primary font-semibold">
+              Log in
             </Link>
           </p>
+          <div className="flex justify-between items-center mb-6">
+            <div className="border w-full border-[#D0D5DD]"></div>
+            <p className="px-2 text-[#667185]">OR</p>
+            <div className="border w-full border-[#D0D5DD]"></div>
+          </div>
+          <p className="font-semibold flex gap-2 w-full border border-[#D0D5DD]  justify-center items-center py-4 rounded-btnRadius">
+            <img src={google} alt="google-icon" />
+            Continue with Google
+          </p>
+         
         </div>
       </div>
     </section>

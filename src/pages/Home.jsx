@@ -104,7 +104,7 @@ const Home = () => {
       </section>
 
       {/* Mobile Project Management Section */}
-      <section className="px-5 md:px-10 lg:px-28 py-12 lg:pb-0 xl:flex justify-between">
+      <section className="px-5 md:px-10 lg:px-28 pt-12  xl:flex justify-between">
         <section className="xl:w-1/2 place-self-center">
           <div className="mb-8 ">
             <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-2">

@@ -16,9 +16,15 @@ const Input = ({
 }) => {
   return (
     <div className={inputClass}>
-      <label className={`mb-[0.25rem] ${labelClass}`}>{label}</label>
+      <label
+        className={`mb-[0.25rem] text-[#101928] font-medium ${labelClass}`}
+      >
+        {label}
+      </label>
 
-      <div className= {`p-[0.75rem] border w-full rounded-[0.27rem] flex items-center ${coverClass}`} >
+      <div
+        className={`p-[0.75rem] border border-[#D0D5DD] w-full rounded-[0.27rem] flex items-center ${coverClass}`}
+      >
         <input
           type={type}
           name={name}

@@ -23,7 +23,8 @@ import icon1 from './icon1.svg';
 import icon2 from './icon2.svg';
 import icon3 from './icon3.svg';
 import icon4 from './icon4.svg';
+import right from './right.svg';
 
 
 
-export { google, success, error, analytics, chats, check, close, games, logo, menu, speaker, ticket, gdg, gogle, helixgade, fed, olotu, mark, quote, icon1, icon2, icon3, icon4 };
+export { google, success, error, analytics, chats, check, close, games, logo, menu, speaker, ticket, gdg, gogle, helixgade, fed, olotu, mark, quote, icon1, icon2, icon3, icon4, right };

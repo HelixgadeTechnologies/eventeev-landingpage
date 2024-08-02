@@ -12,7 +12,7 @@ const features = [
     icon: check,
     title: "Event Check-in",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+      "Eliminate queues and personalize greetings with effortless check-in options.",
   },
   {
     icon: games,
