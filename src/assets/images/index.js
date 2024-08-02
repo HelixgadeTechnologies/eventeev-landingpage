@@ -5,8 +5,8 @@ import phone1 from './phone1.png';
 import phone2 from './phone2.png';
 import play from './play.png';
 import store from './store.png';
-import banner from './signup.png';
-import reset from './reset.png'
+import banner from "./signup.webp";
+import reset from "./reset.webp";
 
 
 export {

@@ -24,8 +24,8 @@ export default {
         primaryWhite: "#F3F9FA",
       },
       backgroundImage: {
-        signup: "url('../src/assets/images/signup.png')",
-        reset: "url('../src/assets/images/reset.png')",
+        signup: "url('../src/assets/images/signup.webp')",
+        reset: "url('../src/assets/images/reset.webp')",
       },
       boxShadow: {
         btnShadow: "0px 1px 0px 0px rgba(27, 31, 35, 0.05)",
