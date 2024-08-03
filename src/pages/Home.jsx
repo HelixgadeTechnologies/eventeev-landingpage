@@ -39,8 +39,8 @@ const Home = () => {
             Get Started <span className="hidden md:block">Now</span>
           </Button>
         </div>
-        <div className="mt-20">
-          <img src={hero} alt="hero-img" />
+        <div className="mt-20 ">
+          <img src={hero} alt="hero-img" className="mx-auto" />
         </div>
       </section>
 
