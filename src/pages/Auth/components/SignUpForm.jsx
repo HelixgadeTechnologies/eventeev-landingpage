@@ -29,6 +29,7 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
       <div className=" flex  gap-6">
         <Input
           label={`First Name`}
+          inputClass={`w-full`}
           labelClass={`text-[14px]`}
           name="firstname"
           onChange={handleInputChange}
@@ -38,6 +39,7 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
         />
         <Input
           label={`Last Name`}
+          inputClass={`w-full`}
           labelClass={`text-[14px]`}
           name="lastname"
           onChange={handleInputChange}
@@ -46,7 +48,7 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
           required
         />
       </div>
-      <Input
+      {/* <Input
         label={`Organisation name`}
         labelClass={`text-[14px]`}
         name="organisationName"
@@ -54,7 +56,7 @@ const SignUpForm = ({formData, setFormData, handleInputChange, handleSignup, isL
         value={formData.organisationName}
         type="text"
         required
-      />
+      /> */}
       <Input
         label={`Email Address`}
         labelClass={`text-[14px]`}

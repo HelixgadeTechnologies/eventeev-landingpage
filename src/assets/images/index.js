@@ -7,6 +7,7 @@ import play from './play.png';
 import store from './store.png';
 import banner from "./signup.webp";
 import reset from "./reset.webp";
+import organisation from "./organisation.webp";
 
 
 export {
@@ -18,5 +19,6 @@ export {
     play,
     store,
     banner,
-    reset
+    reset,
+    organisation
 };

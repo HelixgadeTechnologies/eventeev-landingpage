@@ -11,6 +11,9 @@ import Profile from "../pages/Dashboard/Profile";
 import Settings from "../pages/Dashboard/Settings";
 import ForgetPwd from "../pages/Auth/ForgetPwd";
 import CreatePwd from "../pages/Auth/CreatePwd";
+import VerifyAcct from "../pages/Auth/VerifyAcct";
+import Organisation from "../pages/Auth/Organisation";
+import Verified from "../pages/Auth/Verified";
 
 
 
@@ -23,7 +26,10 @@ const AppRouter = () => {
         <Route index path={'/'} element={<Home />} />
         <Route path={routes.LOGIN} element={<Login />} />
         <Route path={routes.SIGN_UP} element={<Signup />} />
+        <Route path={routes.ORANISATION} element={<Organisation/>} />
         <Route path={routes.FORGOT_PASSWORD} element={<ForgetPwd />} />
+        <Route path={routes.VERIFY_ACCT} element={<VerifyAcct />} />
+        <Route path={routes.VERIFIED} element={<Verified />} />
         <Route path={routes.RESET_PASSWORD} element={<CreatePwd />} />
         <Route path={routes.DASHBOARD} element={<DashboardLayout />} >
             <Route index element={<Feeds />} />

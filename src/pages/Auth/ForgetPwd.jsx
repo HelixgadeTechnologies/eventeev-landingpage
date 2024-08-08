@@ -44,8 +44,8 @@ const ForgetPwd = () => {
 
   return (
     <section className="flex">
-      <div className=" md:w-1/2 hidden lg:block">
-        <img src={reset} alt="forget password image" />
+      <div className=" md:w-1/2  hidden lg:block">
+        <img src={reset} alt="forget password image" className="" />
       </div>
       <div className="w-full md:w-1/2 mx-auto mt-[280px] md:mt-[150px] lg:m-0  flex flex-col justify-center px-[30px] lg:px-20 xl:px-[139px] pt-6 md:pt-8 pb-4 md:shadow-formShadow rounded-btnRadius">
         <div className=" ">

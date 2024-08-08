@@ -61,15 +61,18 @@ const Signup = () => {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row ">
-      <div className="bg-signup bg-cover bg-no-repeat bg-center hidden px-10 pt-10 lg:px-20 lg:pt-32 text-white w-full md:block">
-        <p className=" font-semibold  text-5xl lg:text-6xl">
+    <section className="flex flex-col lg:flex-row lg:h-screen  ">
+      <div className="bg-signup bg-cover bg-no-repeat bg-center hidden px-10 pt-10 lg:px-20  text-white w-full md:flex flex-col justify-center items-center  ">
+        <div className="lg:w-[572px]">
+        <h4 className=" font-bold  text-5xl lg:text-6xl">
           Elevate your Event workflow with Eventeev
-        </p>
-        <p className="text-lg mt-2 mb-8">
+        </h4>
+        <p className="text-lg mt-2 mb-8 lg:w-[420px]">
           Our comprehensive Event platform offers you an unparalleled range of
           event component, sparking creativity and boosting efficiency.
         </p>
+
+        </div>
       </div>
       <div className="w-full px-8 py-10 xl:px-[130px] xl:py-[120px] lg:px-10 lg:py-10 md:shadow-formShadow  rounded-btnRadius">
         <h3 className="text-[#1B1818] font-semibold text-4xl mb-10">
@@ -98,7 +101,6 @@ const Signup = () => {
             <img src={google} alt="google-icon" />
             Continue with Google
           </p>
-         
         </div>
       </div>
     </section>

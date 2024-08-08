@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import routes from "../../router/routes";
 import { google } from "../../assets/icons";
+import { organisation } from "../../assets/images";
 import Layout from "../../layout/AuthLayout";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SignUpForm from "./components/SignUpForm";
-import CreatePwdForm from "./components/CreatePwdForm";
+import OrganisationForm from "./components/OrganisationForm";
 
-const CreatePwd = () => {
+const Organisation = () => {
   const [formData, setFormData] = useState({
-    confirmPassword: "",
-    password: "",
+    organisationName: "",
+    organisationWebsite: "",
+    organisationIndustry: "",
   });
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -28,15 +30,13 @@ const CreatePwd = () => {
   const navigate = useNavigate();
   const url = import.meta.env.VITE_APP_BASE_URL;
 
-  const handleSignup = async (e) => {
+  const handleOrganisationReg = async (e) => {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setPasswordMatch(false);
-      return;
-    }
 
     const data = {
-      password: formData.password,
+      organisationName: formData.organisationName,
+      organisationWebsite: formData.organisationWebsite,
+      organisationIndustry: formData.organisationIndustry,
     };
 
     try {
@@ -57,26 +57,42 @@ const CreatePwd = () => {
   };
 
   return (
-    <section className="grid justify-center w-full items-center">
-      <div className="md:text-center mt-[90px] md:mt-[106px] w-full px-[30px] pt-8 ">
-        <h1 className="text-basedark font-bold text-2xl md:text-[26px]">
-          Create New Password
-        </h1>
-        <p className="text-lg mt-2 mb-10">
-          One more step to go and you are back into your account.
-        </p>
+    <section className="flex flex-col lg:flex-row lg:h-screen  ">
+      <div className="w-full hidden md:block  ">
+        <img
+          src={organisation}
+          alt="image"
+          className=" md:h-[500px] w-full lg:h-screen"
+        />
       </div>
-      <div className="w-full px-[30px] pb-10  mb-5 ">
-        <CreatePwdForm
+      <div className="w-full px-8 py-10 place-self-center xl:px-[130px] xl:py-[120px] lg:px-10 lg:py-10 ">
+        <div className="pb-8">
+        <h3 className="text-[#1B1818] font-semibold text-4xl mb-2">
+          Organisation details!
+        </h3>
+        <p className=" text-[#645D5D] text-sm">
+          Please tell us about your organisation
+        </p>
+
+        </div>
+        <OrganisationForm
           formData={formData}
           setFormData={setFormData}
           handleInputChange={handleInputChange}
-          handleSignup={handleSignup}
+          handleOrganisationReg={handleOrganisationReg}
           isLoading={isLoading}
         />
+        <div className="text-center ">
+          <p className="text-textgray text-sm my-7">
+            Back to{" "}
+            <Link to={routes.SIGN_UP} className="text-primary font-semibold">
+              Registration
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );
 };
 
-export default CreatePwd;
+export default Organisation;

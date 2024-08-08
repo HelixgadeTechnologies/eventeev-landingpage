@@ -73,7 +73,7 @@ const CreatePwdForm = ({
         </li>
       </ul>
 
-      <Button type={"submit"} className={`bg-purple2`}>
+      <Button type={"submit"} className={`bg-primary py-4 font-semibold`}>
         Reset Password
       </Button>
     </form>
